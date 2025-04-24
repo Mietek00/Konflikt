@@ -1,10 +1,18 @@
 public class Person {
     private String name;
     private String surname;
+    private String email;
 
-    public Person(String name, String surname) {
+    public void setName(String name) {
         this.name = name;
+    }
+
+    public void setSurname(String surname) {
         this.surname = surname;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public String getName() {
@@ -15,19 +23,13 @@ public class Person {
         return surname;
     }
 
-    public void setName(String name) {
+    public String getEmail() {
+        return email;
+    }
+
+    public Person(String name, String surname, String email) {
         this.name = name;
-    }
-
-    public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                '}';
+        this.email = email;
     }
 }
